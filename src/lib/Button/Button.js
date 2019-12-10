@@ -13,6 +13,7 @@ const BaseButton = styled.div`
     color:white;
     cursor: pointer;
     border-bottom: 3px solid ${props => darken(0.2, props.color || ThemeDefault.primary)};
+    user-select: none;
     &:hover{
         background-color: ${props => darken(0.2, props.color || ThemeDefault.primary)};
         border-bottom: 3px solid ${props => darken(0.3, props.color || ThemeDefault.primary)};
@@ -23,14 +24,11 @@ const BaseButton = styled.div`
     }
 `;
 
-const Button = ({ children, ...rest }) => {
-
-    return (
-        <BaseButton {...rest} >
-            {children}
-        </BaseButton>
-    );
-};
+const Button = ({ children, ...rest }) => (
+    <BaseButton {...rest} >
+        {children}
+    </BaseButton>
+);
 
 Button.propTypes = {
     /**
