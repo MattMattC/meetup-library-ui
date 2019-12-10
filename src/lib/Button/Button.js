@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import { ThemeDefault } from '../theme';
+import { ThemeDefault } from '../../theme';
 import { darken } from 'polished';
 
 const BaseButton = styled.div`
